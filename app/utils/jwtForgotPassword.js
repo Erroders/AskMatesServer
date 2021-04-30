@@ -13,7 +13,7 @@ const { generateAccessToken } = require("./jwtAuth");
 
 async function sendForgotPasswordEmail(email) {
   const token = generateAccessToken(email);
-  const link = `${process.env.CLIENT_URL}forgotPassword/?email=${email}&authenticateForgotPassword=${token}`;
+  const link = `${process.env.CLIENT_URL}/forgotPassword/?email=${email}&authenticateForgotPassword=${token}`;
 
   const mailTemplate = `<a href=${link}>Create newwpassword</a>`;
   sendMail(

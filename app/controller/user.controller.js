@@ -308,7 +308,7 @@ exports.authenticate = (req, res) => {
           .cookie("username", req.body.username, {
             sameSite: true,
           })
-          .redirect(process.env.CLIENT_URL + "q/");
+          .redirect(process.env.CLIENT_URL + "/q/");
       }
     }
   );

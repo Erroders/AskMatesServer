@@ -45,7 +45,9 @@ exports.create = (req, res) => {
       }
     });
   } else {
-    res.status(307).redirect(process.env.CLIENT_URL + "q/");
+    res
+      .status(307)
+      .redirect(process.env.CLIENT_URL + "/q/");
   }
 };
 
