@@ -308,7 +308,10 @@ exports.authenticate = (req, res) => {
           .cookie("username", req.body.username, {
             sameSite: true,
           })
-          .send({ message: "authenticated" });
+          .send({
+            auth: token,
+            username: req.body.username,
+          });
       }
     }
   );
