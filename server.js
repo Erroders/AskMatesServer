@@ -8,7 +8,7 @@ const app = express();
 // Added Cors Headers to Whitelist localhost:3000
 app.use(
   cors({
-    origin: "*",
+    origin: process.env.CORS_ORIGIN,
     credentials: true,
   })
 );
